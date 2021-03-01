@@ -1,3 +1,33 @@
-<h2>Лабораторная работа №2</h2>
-<p>Цель работы: формирование практических умений работы со слоями и<br>
-    изображениями, используя JavaScript.</p>
+<style>
+    h2 {margin-left: 3rem;}
+    a {margin-left: 5rem;}
+    p {margin-left: 5rem;}
+    #pic {
+        width: 15rem;
+        height: 15rem;
+        margin: 1rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        position: relative;
+    }
+</style>
+
+<script src="/stip-internet/scr.js"></script>
+<h1 onclick="toggleFunction('list')" style="cursor: pointer">Текстовое двухуровневое меню</h1>
+<div id="list" style="display: none">
+    <h2 onclick="toggleFunction('lab')" style="cursor: pointer">Лабораторная работа №2</h2>
+    <div id="lab" style="display: none">
+        <p>Вариант 7.<br>
+        1). Текстовое двухуровневое меню: при выборе определенного пункта<br>
+        меню пункты верхнего уровня раздвигаются и вставляются подпункты выбранного<br>
+        пункта, т. е. пункт меню «раскрывается».</p>
+        <p>2). Организуйте движение изображения слева направо.</p>
+    </div>
+    <h2 onclick="toggleFunction('link')" style="cursor: pointer">Ссылка на исходный код</h2>
+    <div id="link" style="display: none">
+        <a href="https://github.com/matrosvlad/internet.git" target="_blank">Github</a>
+    </div>
+</div>
+<div id="pic" style="background-image: url(https://nikvesti.com/images/imageeditor/2020/2/13/180039/180039_0.jpg)"></div>

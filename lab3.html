@@ -1,5 +1,51 @@
+<style>
+    .red{
+        -webkit-appearance: none;
+        height: 6px;
+        border-radius: 5px;
+        background: red;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+    .red:hover{
+        opacity: 1;
+    }
+    .green{
+        -webkit-appearance: none;
+        height: 6px;
+        border-radius: 5px;
+        background: green;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+    .green:hover{
+        opacity: 1;
+    }
+    .blue{
+        -webkit-appearance: none;
+        height: 6px;
+        border-radius: 5px;
+        background: blue;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+    .blue:hover{
+        opacity: 1;
+    }
+</style>
+
+<script src="./scr3.js"></script>
 <h2>Лабораторная работа №3</h2>
-<p>Создать скрипт, выполняющий действия в соответствии с вариантом (при<br>
-    варианте &gt;10 берется номер варианта, начиная с 1). Использовать возможности,<br>
-    предоставляемые объектной моделью документа DOM, можно использовать<br>
-    фреймворк jQuery (или аналог).</p>
+<p>Вариант 7:<br>
+    Три линейки с бегунками для каждой цветовой составляющей. Изменение<br>
+    положения каждого из бегунков влечет за собой изменение цвета фона документа.</p>
+<p>Цвет <span id="coloroutput"></span></p>
+<input type="range" id="redrange" class="red" value="100" min="0" max="255" onchange="changeColor()">
+<input type="range" id="greenrange" class="green" value="100" min="0" max="255" onchange="changeColor()">
+<input type="range" id="bluerange" class="blue" value="100" min="0" max="255" onchange="changeColor()">

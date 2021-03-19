@@ -1,40 +1,41 @@
-<style>
-    #pic {
-        width: 10rem;
-        height: 10rem;
-        margin: 1rem;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: inline-block;
-        position: relative;
-    }
-</style>
-<script src="../jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(() => {
-        $('#pic').click(() => {
-            $('#pic').hide();
+<head>
+    <style>
+        #pic {
+            width: 10rem;
+            height: 10rem;
+            margin: 1rem;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            position: relative;
+        }
+    </style>
+    <script src="../jquery-3.6.0.min.js" style="color: rgb(0, 0, 0);"></script>
+    <script>
+        $(document).ready(() => {
+            $('#pic').click(() => {
+                $('#pic').hide();
+            });
+
+            $('#block')
+                .animate({marginTop: '+=20rem'}, 1000)
+                .animate({width: '-=5rem', height: '-=5rem'}, 1000)
+                .animate({fontSize: '2em'}, 1000)
+                .animate({marginTop: '-=20rem'}, 1000)
+                .animate({width: '+=10rem', height: '+=10rem'}, 1000)
+
+            $('#check')
+                .change(() => {
+                    if ($('#check').prop('checked')) {
+                        $('#checkblock').css("display", "none");
+                    } else {
+                        $('#checkblock').css("display", "block");
+                    }
+                })
         });
-
-        $('#block')
-            .animate({marginTop: '+=20rem'}, 1000)
-            .animate({width: '-=5rem', height: '-=5rem'}, 1000)
-            .animate({fontSize: '2em'}, 1000)
-            .animate({marginTop: '-=20rem'}, 1000)
-            .animate({width: '+=10rem', height: '+=10rem'}, 1000)
-
-        $('#check')
-            .change(() => {
-                if ($('#check').prop('checked')) {
-                    $('#checkblock').css("display", "none");
-                } else {
-                    $('#checkblock').css("display", "block");
-                }
-            })
-    });
-</script>
-
+    </script>
+</head>
 <div>
     <h2>Вариант 7</h2>
     <p>По нажатию на изображение скрывать его</p>

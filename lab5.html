@@ -1,8 +1,7 @@
-
 <style>
     #pic {
-        width: 15rem;
-        height: 15rem;
+        width: 10rem;
+        height: 10rem;
         margin: 1rem;
         background-size: contain;
         background-repeat: no-repeat;
@@ -11,9 +10,7 @@
         position: relative;
     }
 </style>
-
-<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="http://code.jquery.com/jquery.animate-colors.js"></script>
+<script src="../jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(() => {
         $('#pic').click(() => {
@@ -27,12 +24,12 @@
             .animate({marginTop: '-=20rem'}, 1000)
             .animate({width: '+=10rem', height: '+=10rem'}, 1000)
 
-        $('#keyword_chk')
+        $('#check')
             .change(() => {
-                if ($('#keyword_chk').prop('checked')) {
-                    $('#kwd_block').css("display", "none");
+                if ($('#check').prop('checked')) {
+                    $('#checkblock').css("display", "none");
                 } else {
-                    $('#kwd_block').css("display", "block");
+                    $('#checkblock').css("display", "block");
                 }
             })
     });
@@ -46,9 +43,9 @@
         <p>Регистрация</p>
         <input type="text" id="password">
         <label for="password">Пароль</label><br>
-        <input id="keyword_chk" type="checkbox">
-        <label for="keyword_chk">Не использовать контрольное слово</label><br><br>
-        <div id="kwd_block" style="display: block">
+        <input id="check" type="checkbox">
+        <label for="check">Не использовать контрольное слово</label><br>
+        <div id="checkblock" style="display: block">
             <input type="text"> Контрольное слово
         </div>
     </form>
@@ -57,5 +54,5 @@
         уменьшается, текст внутри уменьшается, затем блок
         возвращается вверх и увеличивается до размеров больше, чем
         изначальные</p>
-    <div id="block" style="background: red; width: 10rem; height: 10rem; margin-left: 10rem; color: rgb(255, 255, 255); font-size: 4em;"> Текст </div>
+    <div id="block" style="background: red; width: 10rem; height: 10rem; margin-left: 10rem; color: white; font-size: 4em;"> Текст </div>
 </div>

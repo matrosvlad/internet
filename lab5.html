@@ -1,0 +1,61 @@
+
+<style>
+    #pic {
+        width: 15rem;
+        height: 15rem;
+        margin: 1rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        position: relative;
+    }
+</style>
+
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="http://code.jquery.com/jquery.animate-colors.js"></script>
+<script>
+    $(document).ready(() => {
+        $('#pic').click(() => {
+            $('#pic').hide();
+        });
+
+        $('#block')
+            .animate({marginTop: '+=20rem'}, 1000)
+            .animate({width: '-=5rem', height: '-=5rem'}, 1000)
+            .animate({fontSize: '2em'}, 1000)
+            .animate({marginTop: '-=20rem'}, 1000)
+            .animate({width: '+=10rem', height: '+=10rem'}, 1000)
+
+        $('#keyword_chk')
+            .change(() => {
+                if ($('#keyword_chk').prop('checked')) {
+                    $('#kwd_block').css("display", "none");
+                } else {
+                    $('#kwd_block').css("display", "block");
+                }
+            })
+    });
+</script>
+
+<div>
+    <h2>Вариант 7</h2>
+    <p>По нажатию на изображение скрывать его</p>
+    <div id="pic" style="cursor: pointer;background-image: url(https://media.npr.org/assets/img/2013/03/06/bluemarble3k-smaller-nasa_custom-644f0b7082d6d0f6814a9e82908569c07ea55ccb-s800-c85.jpg)"></div>
+    <form id="form">
+        <p>Регистрация</p>
+        <input type="text" id="password">
+        <label for="password">Пароль</label><br>
+        <input id="keyword_chk" type="checkbox">
+        <label for="keyword_chk">Не использовать контрольное слово</label><br><br>
+        <div id="kwd_block" style="display: block">
+            <input type="text"> Контрольное слово
+        </div>
+    </form>
+
+    <p>Блок красного цвета с текстом внутри, двигается сверху вниз,
+        уменьшается, текст внутри уменьшается, затем блок
+        возвращается вверх и увеличивается до размеров больше, чем
+        изначальные</p>
+    <div id="block" style="background: red; width: 10rem; height: 10rem; margin-left: 10rem; color: rgb(255, 255, 255); font-size: 4em;"> Текст </div>
+</div>

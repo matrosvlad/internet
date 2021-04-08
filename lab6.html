@@ -1,0 +1,62 @@
+<head>
+    <style>
+        #circle {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: green;
+            display: inline-block;
+            position: relative;
+        }
+    </style>
+    <script src="../jquery-3.6.0.min.js" style="color: rgb(0, 0, 0);"></script>
+    <script>
+        $(document).ready(() => {
+
+            var c = $('#circle')
+                .css({top: '50px', left: '200px', position:'absolute'});
+                        c.delay(1000)
+                .animate({width: '-=50px', height: '-=50px'}, 1000)
+                c.queue(function() {
+                    c.css({"background-color": "red"}, 1000)
+                    c.dequeue();
+                })
+                        c.delay(1000)
+                
+                    c.animate({top: Math.max(0, (($(window).height() - c.outerHeight()) / 2) + 
+                                                $(window).scrollTop()) + "px"});
+                    c.animate({left: Math.max(0, (($(window).width() - c.outerWidth()) / 2) + 
+                                                $(window).scrollLeft()) + "px"});
+
+                        c.delay(1000)
+                c.queue(function() {
+                    c.css("opacity", "0.8");
+                    c.dequeue(); 
+                })
+                        c.delay(1000)
+                c.animate({top: 0});
+                c.animate({left: 0});
+                        c.delay(1000)
+                c.queue(function() {
+                    c.fadeOut("slow");
+                    c.dequeue(); 
+                })
+        });
+    </script>
+</head>
+<div>
+    <h2>Вариант 7</h2>
+    <p>Круг R=100 пикс (не использовать картинки)</p>
+    <p>1. Отображается с отступами 50
+        пикселей от верхней границы и 200
+        пикселей от левой границы<br>
+        2. Изменяет радиус до 50
+        пикселей.<br>
+        3. Изменяет цвет на красный.<br>
+        4. Начинает движение в центр
+        экрана<br>
+        5. Изменяет прозрачность до 0.8<br>
+        6. Движется в левый верхний угол
+        растворяясь.</p>
+    <div id="circle"></div>
+</div>

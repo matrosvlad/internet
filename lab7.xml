@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<TVshow>
+<show name="Орел и решка">
+<date day="10" month="05" year="2021"></date>
+<channel>Новый канал</channel>
+<genre>Шоу путешествий</genre>
+<beginTime>10:00</beginTime>
+<duration>45</duration>
+</show>
+
+<show name="Самый умный">
+<date day="15" month="05" year="2021"></date>
+<channel>1+1</channel>
+<genre>Телевикторина</genre>
+<beginTime>12:00</beginTime>
+<duration>50</duration>
+</show>
+
+<show name="Танцы со звёздами">
+<date day="02" month="05" year="2021"></date>
+<channel>1+1</channel>
+<genre>Шоу талантов</genre>
+<beginTime>21:00</beginTime>
+<duration>150</duration>
+</show>
+
+<show name="Караоке на майдане">
+<date day="12" month="04" year="2021"></date>
+<channel>СТБ</channel>
+<genre>Шоу талантов</genre>
+<beginTime>14:00</beginTime>
+<duration>50</duration>
+</show>
+
+<show name="Холостяк">
+<date day="12" month="04" year="2021"></date>
+<channel>СТБ</channel>
+<genre>Реалити-шоу</genre>
+<beginTime>17:00</beginTime>
+<duration>60</duration>
+</show>
+
+<show name="Ревизор">
+<date day="07" month="05" year="2021"></date>
+<channel>Новый канал</channel>
+<genre>Инфотейнмент</genre>
+<beginTime>14:00</beginTime>
+<duration>50</duration>
+</show>
+
+<show name="Что? Где? Когда?">
+<date day="18" month="05" year="2021"></date>
+<channel>Интер</channel>
+<genre>Телевикторина</genre>
+<beginTime>23:00</beginTime>
+<duration>120</duration>
+</show>
+
+<show name="Гарри Поттер">
+<date day="28" month="05" year="2021"></date>
+<channel>Новый канал</channel>
+<genre>Фильм</genre>
+<beginTime>20:00</beginTime>
+<duration>150</duration>
+</show>
+
+<show name="Футбол">
+<date day="08" month="05" year="2021"></date>
+<channel>Украина</channel>
+<genre>Спорт</genre>
+<beginTime>21:00</beginTime>
+<duration>100</duration>
+</show>
+
+<show name="Вкусно">
+<date day="18" month="05" year="2021"></date>
+<channel>Интер</channel>
+<genre>Кулинарная передача</genre>
+<beginTime>09:00</beginTime>
+<duration>45</duration>
+</show>
+</TVshow>

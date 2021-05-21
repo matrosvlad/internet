@@ -4,7 +4,7 @@
     <xsl:template match="/">
         <TVshow>
             <xsl:for-each select="/TVshow/show">
-                <xsl:sort select="@channel" data-type="string" order="descending"/>
+                <xsl:sort select="@duration" order="descending" data-type="number"/>
                 <show>
                     <h3 style="margin-bottom: 0.4rem;">
                         <xsl:value-of select="./@name"/>

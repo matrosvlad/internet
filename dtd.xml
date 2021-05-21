@@ -1,4 +1,17 @@
 <?xml version="1.0"?>
+
+<!DOCTYPE TVshow [
+	<!ELEMENT TVshow (show)+>
+	<!ELEMENT show (date,channel,genre,beginTime,duration+)>
+	<!ATTLIST show name CDATA #REQUIRED >
+	<!ELEMENT date (#PCDATA)>
+    <!ATTLIST date day month year CDATA #REQUIRED >
+	<!ELEMENT channel (#PCDATA)>
+	<!ELEMENT genre (#PCDATA)>
+	<!ELEMENT beginTime (#PCDATA)>
+	<!ELEMENT duration (#PCDATA)>
+]>
+
 <TVshow>
     <show name="Орел и решка">
         <date day="10" month="05" year="2021"></date>

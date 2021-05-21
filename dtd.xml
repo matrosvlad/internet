@@ -5,7 +5,10 @@
 	<!ELEMENT show (date,channel,genre,beginTime,duration+)>
 	<!ATTLIST show name CDATA #REQUIRED >
 	<!ELEMENT date (#PCDATA)>
-    <!ATTLIST date day month year CDATA #REQUIRED >
+    <!ATTLIST date 
+            day CDATA #REQUIRED
+            month CDATA #REQUIRED
+            year CDATA #REQUIRED >
 	<!ELEMENT channel (#PCDATA)>
 	<!ELEMENT genre (#PCDATA)>
 	<!ELEMENT beginTime (#PCDATA)>

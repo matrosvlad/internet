@@ -4,14 +4,14 @@
     <xsl:template match="/">
         <TVshow>
             <xsl:for-each select="/TVshow/show">
-                <xsl:sort select="@duration" data-type="number" order="descending"/>
+                <xsl:sort select="@channel" data-type="string" order="descending"/>
                 <show>
                     <h3 style="margin-bottom: 0.4rem;">
                         <xsl:value-of select="./@name"/>
                     </h3>
                     <p style="margin-top: 0.4rem;">
                         <xsl:text>День:</xsl:text><xsl:text> </xsl:text>
-                        <xsl:value-of select="./weekday"/><xsl:text>.</xsl:text>
+                        <xsl:value-of select="./weekday"/><xsl:text>  </xsl:text>
                         <xsl:value-of select="./day"/><xsl:text>.</xsl:text>
                         <xsl:value-of select="./month"/><xsl:text>.</xsl:text>
                         <xsl:value-of select="./year"/>

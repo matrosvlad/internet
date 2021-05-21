@@ -19,15 +19,15 @@
                 Array.prototype.slice.call(data.getElementsByTagName("show"))
                 .forEach(node => {
                     const name = node.getAttribute('name');
-                    const date = node.children [0].innerHTML;
-                    const day = node.getAttribute('day');
-                    const month = node.getAttribute('month');
-                    const year = node.getAttribute('year');
-                    const channel = node.children [1].innerHTML;
-                    const genre = node.children [2].innerHTML;
-                    const beginTime = node.children [3].innerHTML;
-                    const duration = node.children [4].innerHTML;
-                    $('#table').append(`<tr><td>${name}</td><td>${day}</td><td>${channel}</td><td>${genre}</td><td>${beginTime}</td><td>${duration}</td></tr>`);
+                    const day = node.children [0].innerHTML;
+                    const month = node.children [1].innerHTML;
+                    const year = node.children [2].innerHTML;
+                    const weekday = node.children [3].innerHTML;
+                    const channel = node.children [4].innerHTML;
+                    const genre = node.children [5].innerHTML;
+                    const beginTime = node.children [6].innerHTML;
+                    const duration = node.children [7].innerHTML;
+                    $('#table').append(`<tr><td>${name}</td><td>${weekday}</td><td>${day}.${month}.${year}</td><td>${channel}</td><td>${genre}</td><td>${beginTime}</td><td>${duration}</td></tr>`);
                 })
             });
     });
@@ -37,18 +37,16 @@
     <h3>Вариант 7</h3>
     <p>Информация о передачах на ТВ:<br>
         - передача;<br>
-        - день:<br>
-        ü число;<br>
-        ü месяц;<br>
-        ü год;<br>
-        ü день недели;<br>
+        - число;<br>
+        - месяц;<br>
+        - год;<br>
+        - день недели;<br>
         - канал;<br>
         - жанр;<br>
         - время начала;<br>
         - продолжительность.<br>
     </p>
-
     <table id="table">
-        <th>Название</th><th>День</th><th>Канал</th><th>Жанр</th><th>Время начала</th><th>Продолжительность</th>
+        <th>Название</th><th>День недели</th><th>День</th><th>Канал</th><th>Жанр</th><th>Время начала</th><th>Продолжительность</th>
     </table>
 </div>

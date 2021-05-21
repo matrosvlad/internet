@@ -10,7 +10,10 @@
   <xs:element name="show">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="date"/>
+        <xs:element ref="day"/>
+        <xs:element ref="month"/>
+        <xs:element ref="year"/>
+        <xs:element ref="weekday"/>
         <xs:element ref="channel"/>
         <xs:element ref="genre"/>
         <xs:element ref="beginTime"/>
@@ -19,19 +22,12 @@
       <xs:attribute name="name" use="required" type="xs:string"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="date">
-      <xs:complexType>
-      <xs:simpleContent>
-        <xs:extension base="xs:NCName">
-          <xs:attribute name="day" use="required" type="xs:integer"/>
-          <xs:attribute name="month" use="required" type="xs:integer"/>
-          <xs:attribute name="year" use="required" type="xs:integer"/>
-        </xs:extension>
-      </xs:simpleContent>
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="day" type="xs:integer"/>
+  <xs:element name="month" type="xs:integer"/>
+  <xs:element name="year" type="xs:integer"/>
+  <xs:element name="weekday" type="xs:string"/>
   <xs:element name="channel" type="xs:string"/>
   <xs:element name="genre" type="xs:string"/>
   <xs:element name="beginTime" type="xs:string"/>
-  <xs:element name="duration" type="xs:string"/>
+  <xs:element name="duration" type="xs:integer"/>
 </xs:schema>

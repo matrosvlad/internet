@@ -1,0 +1,51 @@
+<style>
+    table {
+        border: solid 1px black;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: solid 1px black;
+        padding: 5px;
+    }
+</style>
+
+<script src="../jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(() => {
+        fetch('../lab9.xml')
+            .then(res => res.text())
+            .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
+            .then(data => {
+                Array.prototype.slice.call(data.getElementsByTagName("show"))
+                .forEach(node => {
+                    const name = node.getAttribute('name');
+                    const date = node.children [0].innerHTML;
+                    const channel = node.children [1].innerHTML;
+                    const genre = node.children [2].innerHTML;
+                    const beginTime = node.children [3].innerHTML;
+                    const duration = node.children [4].innerHTML;
+                    $('#table').append(`<tr><td>${name}</td><td>${date}</td><td>${channel}</td><td>${genre}</td><td>${beginTime}</td><td>${duration}</td></tr>`);
+                })
+            });
+    });
+</script>
+
+<div>
+    <h3>Вариант 7</h3>
+    <p>Информация о передачах на ТВ:<br>
+        - передача;<br>
+        - день:<br>
+        ü число;<br>
+        ü месяц;<br>
+        ü год;<br>
+        ü день недели;<br>
+        - канал;<br>
+        - жанр;<br>
+        - время начала;<br>
+        - продолжительность.<br>
+    </p>
+
+    <table id="table">
+        <th>Название</th><th>День</th><th>Канал</th><th>Жанр</th><th>Время начала</th><th>Продолжительность</th>
+    </table>
+</div>

@@ -2,9 +2,9 @@
 
 <!DOCTYPE TVshow [
 	<!ELEMENT TVshow (show)+>
-	<!ELEMENT show (date,channel,genre,beginTime,duration+)>
+	<!ELEMENT show (date,channel,genre,beginTime,duration)>
 	<!ATTLIST show name CDATA #REQUIRED >
-	<!ELEMENT date (#PCDATA)>
+	<!ELEMENT date (day,month,year)>
     <!ATTLIST date 
             day CDATA #REQUIRED
             month CDATA #REQUIRED

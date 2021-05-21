@@ -4,7 +4,7 @@
         <day>10</day>
         <month>05</month>
         <year>2021</year>
-        <weekday>Понедельник<weekday>
+        <weekday>Понедельник</weekday>
         <channel>Новый канал</channel>
         <genre>Шоу путешествий</genre>
         <beginTime>10:00</beginTime>
@@ -15,7 +15,7 @@
         <day>15</day>
         <month>05</month>
         <year>2021</year>
-        <weekday>Суббота<weekday>
+        <weekday>Суббота</weekday>
         <channel>1+1</channel>
         <genre>Телевикторина</genre>
         <beginTime>12:00</beginTime>
@@ -26,7 +26,7 @@
         <day>02</day>
         <month>05</month>
         <year>2021</year>
-        <weekday>Воскресенье<weekday>
+        <weekday>Воскресенье</weekday>
         <channel>1+1</channel>
         <genre>Шоу талантов</genre>
         <beginTime>21:00</beginTime>
@@ -37,7 +37,7 @@
         <day>12</day>
         <month>04</month>
         <year>2021</year>
-        <weekday>Понедельник<weekday>
+        <weekday>Понедельник</weekday>
         <channel>СТБ</channel>
         <genre>Шоу талантов</genre>
         <beginTime>14:00</beginTime>
@@ -48,7 +48,7 @@
         <day>12</day>
         <month>04</month>
         <year>2021</year>
-        <weekday>Понедельник<weekday>
+        <weekday>Понедельник</weekday>
         <channel>СТБ</channel>
         <genre>Реалити-шоу</genre>
         <beginTime>17:00</beginTime>
@@ -59,7 +59,7 @@
         <day>07</day>
         <month>05</month>
         <year>2021</year>
-        <weekday>Пятница<weekday>
+        <weekday>Пятница</weekday>
         <channel>Новый канал</channel>
         <genre>Инфотейнмент</genre>
         <beginTime>14:00</beginTime>
@@ -70,7 +70,7 @@
         <day>18</day>
         <month>05</month>
         <year>2021</year>
-        <weekday>Вторник<weekday>
+        <weekday>Вторник</weekday>
         <channel>Интер</channel>
         <genre>Телевикторина</genre>
         <beginTime>23:00</beginTime>
@@ -81,7 +81,7 @@
         <day>28</day>
         <month>05</month>
         <year>2021</year>
-        <weekday>Пятница<weekday>
+        <weekday>Пятница</weekday>
         <channel>Новый канал</channel>
         <genre>Фильм</genre>
         <beginTime>20:00</beginTime>
@@ -92,7 +92,7 @@
         <day>08</day>
         <month>05</month>
         <year>2021</year>
-        <weekday>Суббота<weekday>
+        <weekday>Суббота</weekday>
         <channel>Украина</channel>
         <genre>Спорт</genre>
         <beginTime>21:00</beginTime>
@@ -103,7 +103,7 @@
         <day>18</day>
         <month>05</month>
         <year>2021</year>
-        <weekday>Вторник<weekday>
+        <weekday>Вторник</weekday>
         <channel>Интер</channel>
         <genre>Кулинарная передача</genre>
         <beginTime>09:00</beginTime>

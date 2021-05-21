@@ -11,9 +11,9 @@
                     </h3>
                     <p style="margin-top: 0.4rem;">
                         <xsl:text>День:</xsl:text><xsl:text> </xsl:text>
-                        <xsl:value-of select="./weekday"/><xsl:text> </xsl:text>
-                        <xsl:value-of select="./day"/><xsl:text> </xsl:text>
-                        <xsl:value-of select="./month"/><xsl:text> </xsl:text>
+                        <xsl:value-of select="./weekday"/><xsl:text>.</xsl:text>
+                        <xsl:value-of select="./day"/><xsl:text>.</xsl:text>
+                        <xsl:value-of select="./month"/><xsl:text>.</xsl:text>
                         <xsl:value-of select="./year"/>
                     </p>
                     <p style="margin-top: 0.4rem;">
@@ -30,7 +30,7 @@
                     </p>
                     <p style="margin-top: 0.4rem;">
                         <xsl:text>Длительность:</xsl:text><xsl:text> </xsl:text>
-                        <xsl:value-of select="./duration"/>
+                        <xsl:value-of select="./duration"/><xsl:text> мин.</xsl:text>
                     </p>
                 </show>
             </xsl:for-each>

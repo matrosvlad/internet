@@ -4,6 +4,10 @@
 	<!ELEMENT TVshow (show)+>
 	<!ELEMENT show (day,month,year,weekday,channel,genre,beginTime,duration)>
 	<!ATTLIST show name CDATA #REQUIRED >
+    <!ELEMENT day (#PCDATA)>
+    <!ELEMENT month (#PCDATA)>
+    <!ELEMENT year (#PCDATA)>
+    <!ELEMENT weekday (#PCDATA)>
 	<!ELEMENT channel (#PCDATA)>
 	<!ELEMENT genre (#PCDATA)>
 	<!ELEMENT beginTime (#PCDATA)>

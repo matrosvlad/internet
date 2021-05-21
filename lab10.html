@@ -20,9 +20,9 @@
                 .forEach(node => {
                     const name = node.getAttribute('name');
                     const date = node.children [0].innerHTML;
-                    const day = date.getAttribute('day');
-                    const month = date.getAttribute('month');
-                    const year = date.getAttribute('year');
+                    const day = node.getAttribute('day');
+                    const month = node.getAttribute('month');
+                    const year = node.getAttribute('year');
                     const channel = node.children [1].innerHTML;
                     const genre = node.children [2].innerHTML;
                     const beginTime = node.children [3].innerHTML;

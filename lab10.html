@@ -20,11 +20,14 @@
                 .forEach(node => {
                     const name = node.getAttribute('name');
                     const date = node.children [0].innerHTML;
+                    const day = date.getAttribute('day');
+                    const month = date.getAttribute('month');
+                    const year = date.getAttribute('year');
                     const channel = node.children [1].innerHTML;
                     const genre = node.children [2].innerHTML;
                     const beginTime = node.children [3].innerHTML;
                     const duration = node.children [4].innerHTML;
-                    $('#table').append(`<tr><td>${name}</td><td>${date}</td><td>${channel}</td><td>${genre}</td><td>${beginTime}</td><td>${duration}</td></tr>`);
+                    $('#table').append(`<tr><td>${name}</td><td>${day}${month}${year}</td><td>${channel}</td><td>${genre}</td><td>${beginTime}</td><td>${duration}</td></tr>`);
                 })
             });
     });

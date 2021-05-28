@@ -5,7 +5,7 @@
         <TVshow>
             <xsl:for-each select="/TVshow/show">
                 <xsl:if test="month=04">
-                <xsl:sort select="channel" order="descending" data-type="string"/>
+                <!-- <xsl:sort select="channel" order="descending" data-type="string"/> -->
                     <show>
                         <h3 style="margin-bottom: 0.4rem;">
                             <xsl:value-of select="./@name"/>
@@ -17,6 +17,7 @@
                             <xsl:value-of select="./month"/><xsl:text>.</xsl:text>
                             <xsl:value-of select="./year"/>
                         </p>
+                        <xsl:sort select="channel" order="descending" data-type="string"/>
                         <p style="margin-top: 0.4rem;">
                             <xsl:text>Канал:</xsl:text><xsl:text> </xsl:text>
                             <xsl:value-of select="./channel"/>

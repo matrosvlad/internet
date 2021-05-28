@@ -17,7 +17,7 @@
                             <xsl:value-of select="./month"/><xsl:text>.</xsl:text>
                             <xsl:value-of select="./year"/>
                         </p>
-                        <xsl:sort select="channel" order="descending" data-type="string"/>
+                        
                         <p style="margin-top: 0.4rem;">
                             <xsl:text>Канал:</xsl:text><xsl:text> </xsl:text>
                             <xsl:value-of select="./channel"/>

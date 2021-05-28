@@ -4,7 +4,8 @@
     <xsl:template match="/">
         <TVshow>
             <xsl:for-each select="/TVshow/show">
-                <xsl:if month="04" sort select="channel" order="descending" data-type="string"/>
+                <xsl:if test = "month = 04" />
+                <!-- <xsl:if test = "month = 04" sort select="channel" order="descending" data-type="string"/> -->
                 <show>
                     <h3 style="margin-bottom: 0.4rem;">
                         <xsl:value-of select="./@name"/>

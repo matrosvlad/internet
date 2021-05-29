@@ -36,7 +36,7 @@
                 const data = new window.DOMParser().parseFromString(xhr.responseText, "text/xml");
                 Array.prototype.slice.call(data.getElementsByTagName("show"))
                     .forEach(function (node) {
-                        const calories = node.getAttribute('name');
+                        const name = node.getAttribute('name');
                         const day = node.children [0].innerHTML;
                         const month = node.children [1].innerHTML;
                         const year = node.children [2].innerHTML;

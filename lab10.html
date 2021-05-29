@@ -11,26 +11,49 @@
 
 <script src="../jquery-3.6.0.min.js"></script>
 <script>
-    $(document).ready(() => {
-        fetch('../lab9.xml')
-            .then(res => res.text())
-            .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
-            .then(data => {
+    function toWord(number) {
+        switch (Number(number)) {
+            case 04: return ' апрель';
+            case 05: return ' май';
+            case 45: return 'Сорок пять';
+            case 50: return 'Пятьдесят';
+            case 60: return 'Шестьдесят';
+            case 100: return 'Сто';
+            case 120: return 'Сто двадцать';
+            case 150: return 'Сто пятьдесят';
+            default: return "";
+        }
+    }
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', '../lab9.xml', true);
+        xhr.send();
+        xhr.addEventListener('readystatechange', function(e){
+            if( xhr.readyState !== 4  ) return;
+            if( xhr.status === 200 ){
+                const data = new window.DOMParser().parseFromString(xhr.responseText, "text/xml");
                 Array.prototype.slice.call(data.getElementsByTagName("show"))
-                .forEach(node => {
-                    const name = node.getAttribute('name');
-                    const day = node.children [0].innerHTML;
-                    const month = node.children [1].innerHTML;
-                    const year = node.children [2].innerHTML;
-                    const weekday = node.children [3].innerHTML;
-                    const channel = node.children [4].innerHTML;
-                    const genre = node.children [5].innerHTML;
-                    const beginTime = node.children [6].innerHTML;
-                    const duration = node.children [7].innerHTML;
-                    $('#table').append(`<tr><td>${name}</td><td>${weekday}</td><td>${day}.${month}.${year}</td><td>${channel}</td><td>${genre}</td><td>${beginTime}</td><td>${duration} мин.</td></tr>`);
-                })
-            });
+                    .forEach(function (node) {
+                        const calories = node.getAttribute('name');
+                        const day = node.children [0].innerHTML;
+                        const month = node.children [1].innerHTML;
+                        const year = node.children [2].innerHTML;
+                        const weekday = node.children [3].innerHTML;
+                        const channel = node.children [4].innerHTML;
+                        const genre = node.children [5].innerHTML;
+                        const beginTime = node.children [6].innerHTML;
+                        const duration = node.children [7].innerHTML;
+                        const row = document.createElement('tr');
+                        row.innerHTML = '<tr><td>' + name + '</td><td>' + weekday + '</td><td>' + day + '.' + toWord(month) + '.' + year +
+                            '</td><td>' + channel + '</td><td>' + genre + '</td><td>' + beginTime + '</td><td>' + toWord(duration) + 'мин.' + '</td></tr>';
+                        document.getElementById('table').appendChild(row);
+                    });
+            }
+        });
     });
+
 </script>
 
 <div>

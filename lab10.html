@@ -46,8 +46,8 @@
                         const beginTime = node.children [6].innerHTML;
                         const duration = node.children [7].innerHTML;
                         const row = document.createElement('tr');
-                        row.innerHTML = '<tr><td>' + name + '</td><td>' + weekday + '</td><td>' + day + '.' + toWord(month) + '.' + year +
-                            '</td><td>' + channel + '</td><td>' + genre + '</td><td>' + beginTime + '</td><td>' + toWord(duration) + 'мин.' + '</td></tr>';
+                        row.innerHTML = '<tr><td>' + name + '</td><td>' + weekday + '</td><td>' + day + '.' + toWord(month) + ' ' + year +
+                            '</td><td>' + channel + '</td><td>' + genre + '</td><td>' + beginTime + '</td><td>' + toWord(duration) + ' мин.' + '</td></tr>';
                         document.getElementById('table').appendChild(row);
                     });
             }
